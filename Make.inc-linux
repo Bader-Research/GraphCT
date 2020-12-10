@@ -1,0 +1,12 @@
+# -*- Makefile -*-
+PARSER_DIR = parsers
+GRAPHGEN_DIR = graphgen
+SERVER_DIR = server
+IOLIB_DIR = compat
+COMPATLIB = $(IOLIB_DIR)/libxmt-ops.a
+CC = gcc -std=gnu9x -fopenmp
+CXX = g++
+LD = $(CXX) -fopenmp
+CFLAGS  = -Wall -g -O2 -march=native -fno-trapping-math -I$(IOLIB_DIR)
+LDFLAGS = 
+LIBS = -lm -lrt
